@@ -1,0 +1,238 @@
+<html>
+</head>
+
+<style>
+a {
+  text-decoration: none;
+}
+.title {
+  font-size: bold;
+}
+.subtitle {
+
+}
+.container {
+  margin: 10px auto;
+  padding: 10px;
+}
+.logo {
+  text-align: center;
+  padding-bottom: 10px;
+}
+.hero {
+  background: #ff1144;
+  padding: 30px 50px;
+  text-align: left;
+  max-width: 400px;
+  font-size: 1.5em;
+  color: white;
+  margin: 0 auto;
+  Margin: 0 auto;
+
+  border-radius: 3px;
+  box-shadow: 2px 2px 2.5px #e6e6e6;
+  text-shadow: 2px 2px #e42c5;
+}
+.card {
+  float: right;
+  width: 525px;
+}
+.dp {
+  border-radius: 50%;
+  float: left;
+  width: 24px;
+  height: 24px;
+}
+.stamp {
+  margin: auto 30px;
+  color: #888888;
+}
+.icon {
+  width: 16px;
+  height: 32px;
+}
+.location {
+  margin-right: 20px;
+}
+.likes {
+  margin-right: 20px;
+}
+.creator {
+  margin-right: 20px;
+}
+.heading {
+  font-size: 2em;
+  padding: 50px 0px 0px 6px;
+}
+
+.icon img {
+  width: 4.5em;
+  height: 4.5em;
+  padding: 15px 15px;
+  margin-right: 5px;
+}
+table {
+  border: 0.25em;
+  border-width: medium;
+  border-color: black;
+  border-collapse: collapse;
+  max-width: 600px;
+}
+.endnote {
+  font-size: 1.35em;
+  padding: 10px;
+  color: #333333;
+}
+.footer {
+  max-width: 600px;
+  margin: 0px 10px;
+  padding-top: 100px;
+  font-size: 0.75em;
+  color: #4d4d4d;
+}
+.card {
+  float: right;
+  width: 525px;
+}
+.discussion-title {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+.message-body {
+  margin: 5px auto;
+  font-size: 1.1em;
+  color: #4d4d4d;
+  line-height: 1.25em;
+}
+.stamp {
+  margin: 10px auto;
+  color: #888888;
+}
+.card-footer {
+  margin-top: 15px;
+  display: inline-block;
+  color: #888888;
+}
+.card-footer {
+  margin-top: 15px;
+  display: inline-block;
+  color: #888888;
+}
+.inline-blocks {
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 6.75px;
+}
+.location {
+  margin-right: 20px;
+}
+.read-button {
+  background: #ff1144;
+  border-radius: 2px;
+  box-shadow: 2px 2px 2.5px #e6e6e6;
+  text-shadow: 2px 2px #e42c5;
+  padding: 10px;
+  text-align: center;
+  min-width: 100px;
+  font-size: 1em;
+  font-weight: bold;
+  color: white;
+  display: block;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 0;
+  vertical-align: middle;
+}
+.img-heart {
+  width: 16px;
+  height: 14.170px;
+}
+.message-body-image {
+  height: 200px;
+  max-width: 500px;
+  background-image: url('{{this.meta.photo.thumbnail_url}}');
+  background-repeat: repeat-y no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 3px;
+  margin-top: 10px;
+}
+</style>
+
+<body>
+  <table class="container">
+    <tr><td class="logo" colspan="2">
+      <img alt="Belong"
+      src="https://raw.githubusercontent.com/RahulKondi/belongemail/master/img/belong.png" style="width:144px; height:54px;">
+    </td></tr>
+    <tr><td class="hero" colspan="2">
+      <div>
+        <p><b>There ought to be a better way to start the day than by getting out of bed.</b></p>
+        <p>Here's some fun chatter for you to catch up with.</p>
+      </div>
+    </td></tr>
+    <tr><td class="heading" colspan="2">
+      Discussions trending today
+    </td></tr>
+
+
+    {{#each threads}}
+    {{#if this.indexFourth}}
+    <tr><td class="heading" colspan="2">
+      More Discussions
+    </td></tr>
+    {{/if}}
+
+    <tr>
+      <td>
+        <div class="container">
+          <div class="card">
+            <div class="discussion-title">{{this.title}}</div>
+            <div>
+              {{#if this.showBody}}
+              {{#if this.meta.photo.url}}
+              <div class="message-body-image"></div>
+              {{/if}}
+              {{#unless this.meta.photo.url}}
+              <div class="message-body">{{this.body}}</div>
+              {{/unless}}
+              {{/if}}
+              <span class="card-footer">
+                <span class="inline-blocks creator">
+                  <span class="inline-blocks"> <img  class="dp" src="/i/picture?user={{this.creator}}&size=48" alt="⇣"/> </span>
+                  <span class="inline-blocks"> <b>{{this.creator}}</b> </span>
+                </span>
+                <span class="inline-blocks location">
+                  <span class="inline-blocks">
+                    <img src="/run/media/rahulkondi/Do_it/Wokr/BELONG/EMAIL/mockups/location.png" />
+
+                  </span>
+                  <span class="inline-blocks">{{this.room}}</span>
+                </span>
+                <span class="inline-blocks likes">
+                  <span class="inline-blocks">
+                    <img class="img-heart" src="/run/media/rahulkondi/Do_it/Wokr/BELONG/EMAIL/mockups/heart.png" />
+                  </span>
+                  <span class="inline-blocks">{{this.counts.upvotes}} Likes</span>
+                </span>
+                <span class="inline-blocks">
+                  <a href="this.link">
+                    <button class="read-button">Read more
+                    </button>
+                  </a>
+                </span>
+              </span>
+            </td>
+          </tr>
+          {{/each}}
+
+        </td><td class="footer" colspan="2">
+          <b>&copy; Belong</b> Your friendly neighborhood, #43, KR Garden, Murugeshpalya, Bangalore, Karnataka, 560017
+          <p>Ignorance is bliss? <a href="{{domain}}/r/unsubscribe?email={{token}}" style="color:#6644bb; text-decoration: none"> Unsubscribe</a> </p>
+        </td></tr>
+      </td></tr>
+
+    </table>
+  </body>
+  </html>

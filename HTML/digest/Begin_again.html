@@ -1,0 +1,155 @@
+<html>
+<head>
+<style>
+body{
+  margin:0;
+  padding:0;
+}
+
+img{
+  border:0 none;
+  height:auto;
+  line-height:100%;
+  outline:none;
+  text-decoration:none;
+}
+
+a img{
+  border:0 none;
+}
+
+.imageFix{
+  display:block;
+}
+
+table, td{
+  border-collapse:collapse;
+}
+
+#bodyTable{
+  height:100% !important;
+  margin:0;
+  padding:0;
+  width:100% !important;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 600px;
+  min-width: 300px;
+  border-color: #222222;
+  border-width: 2px;
+  table-layout: fixed;
+}
+.avatar {
+  border-radius: 50%;
+  float: left;
+  width: 36px;
+  height: 36px;
+}
+.discussion-title {
+  font-weight: bold;
+  font-size: 1em;
+  color: #333333;
+}
+.discussion-summary {
+  colspan: 2;
+  font-size: 1em;
+  color: #333333;
+}
+.inline-blocks {
+  display: inline-block;
+  vertical-align: middle;
+}
+.location {
+  margin-right: 20px;
+}
+.label {
+  font-size: 0.8em;
+  color: #444444;
+  max-width: 5em;
+}
+.read-button {
+  background: #ff1144;
+  border-radius: 2px;
+  box-shadow: 2px 2px 2.5px #e6e6e6;
+  text-shadow: 2px 2px #e42c5;
+  padding: 10px;
+  text-align: center;
+  min-width: 100px;
+  font-size: 0.8em;
+  font-weight: bold;
+  color: white;
+  display: block;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 0;
+  vertical-align: middle;
+}
+</style>
+</head>
+
+<body>
+  <table class="container" border="1">
+    <tr> <!-- outer row -->
+      <td> <!-- Avatar column -->
+        <img class="avatar" src="https://upload.wikimedia.org/wikipedia/en/thumb/e/ed/Nyan_cat_250px_frame.PNG/220px-Nyan_cat_250px_frame.PNG" alt="⇣"/>
+      </td>
+      <td> <!--Discussion column-->
+        <table border="1">
+          <tr> <!-- discussion-title -->
+            <td  colspan="2">
+              <h2 class="discussion-title">
+                Reason for the bus strike?
+              </h2>
+            </td>
+          </tr>
+          <tr> <!-- discussion-summary-->
+            <td  colspan="2">
+              <p class="discussion-summary">
+                I am not aware of the reason. Why so much fuss? Schools and colleges are also shut for next 2 days.
+              </p>
+            </td>
+          </tr>
+          <tr> <!--footer -->
+            <td> <!-- locality -->
+              <span class="inline-blocks location">
+                <span class="inline-blocks">
+                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="32" viewBox="0 0 16 32">
+                    <g fill="#64b">
+                      <path d="M12.418 10.669a4.76 4.76 0 0 0-1.024-1.52 4.76 4.76 0 0 0-3.38-1.4 4.75 4.75 0 0 0-3.381 1.4 4.759 4.759 0 0 0-1.401 3.38c0 1.084.767 2.831 2.279 5.192 1.109 1.73 2.233 3.179 2.244 3.193l.258.332.258-.332a48.12 48.12 0 0 0 2.244-3.193c1.513-2.36 2.28-4.108 2.28-5.191 0-.645-.127-1.271-.377-1.861zm-4.405 3.5a1.853 1.853 0 1 1 0-3.706 1.853 1.853 0 0 1 0 3.707z"></path><path d="M15.293 19.55c-.416-.382-1.004-.722-1.746-1.01a12.055 12.055 0 0 0-2.062-.58c-.115.19-.235.384-.36.582.806.143 1.547.341 2.19.591 1.3.506 2.047 1.167 2.047 1.814 0 .648-.746 1.309-2.046 1.814-1.415.55-3.303.853-5.316.853s-3.901-.303-5.316-.853c-1.3-.505-2.046-1.166-2.046-1.814 0-.647.746-1.308 2.046-1.814a11.947 11.947 0 0 1 2.355-.62 38.137 38.137 0 0 1-.361-.583c-.815.148-1.568.353-2.225.609-.742.288-1.33.629-1.746 1.011-.47.431-.707.901-.707 1.397s.238.966.707 1.397c.416.383 1.004.723 1.746 1.011 1.487.578 3.457.896 5.547.896s4.06-.318 5.547-.896c.742-.288 1.33-.628 1.746-1.011.469-.431.707-.901.707-1.397s-.238-.965-.707-1.397z">
+                      </path>
+                    </g>
+                  </svg>
+                </span>
+                <span class="inline-blocks label"> Murugeshpalya </span>
+              </span>
+            </td>
+            <td> <!-- likes -->
+              <span class="inline-blocks likes">
+                <span class="inline-blocks">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15.983" height="13.986" viewBox="0 0 14.984306 13.111419">
+                    <g fill-rule="evenodd">
+                      <g fill="#f14">
+                        <path style="isolation:auto;mix-blend-mode:normal" d="M4.505 9.28C2.98 7.72 1.618 6.265 1.478 6.05c-.4-.614-.59-1.53-.466-2.25.2-1.17.784-1.984 1.768-2.468.565-.278.698-.306 1.46-.304.738.003.896.033 1.347.268.28.147.826.573 1.21.948l.702.68.638-.642c.352-.355.893-.782 1.203-.95.52-.282.63-.306 1.4-.306.71 0 .915.037 1.36.246.97.454 1.622 1.325 1.845 2.46.132.673.013 1.403-.344 2.11-.323.64-5.81 6.28-6.11 6.28-.157 0-.947-.752-2.985-2.84zm8.14-5.1c0-.8-.573-1.54-1.37-1.77-.59-.174-.86-.11-.86.2 0 .2.04.227.358.227.655 0 1.298.602 1.338 1.253.014.223.08.397.163.435.307.14.37.08.37-.346z" color="#000" overflow="visible" opacity=".921" stroke="#f14" stroke-width=".346" stroke-linecap="round" stroke-linejoin="round"/>
+                      </g>
+                      <path d="M12.463 4.542a2.72 2.72 0 0 0-.17-.042c-.117-.026-.125-.044-.125-.284 0-.768-.558-1.354-1.34-1.405l-.332-.02-.03-.184c-.018-.1-.02-.196-.004-.21.056-.057.616-.024.87.05.333.097.77.418.96.708.207.31.34.774.324 1.11-.014.256-.046.314-.154.278z" style="isolation:auto;mix-blend-mode:normal" color="#000" overflow="visible" opacity=".921" fill="#fff" stroke="#f14" stroke-width=".046" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                  </svg>
+                </span>
+                <span class="inline-blocks label">Likes</span>
+              </span>
+            </td>
+            <td> <!-- read more button -->
+              <button class="read-button">Read more
+              </button>
+            </td>
+          </tr>
+          <table>
+          </td>
+        </tr>
+      </table>
+    </body>
+
+    </html>
